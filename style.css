@@ -1,0 +1,184 @@
+/*_*/
+
+h1 {
+    text-align: center;
+	}
+
+/* Styles for polygons! */
+.b-polygon {
+    visibility: hidden;
+    display: inline-block;
+
+    overflow: hidden;
+
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    }
+    .b-polygon-part {
+        visibility: hidden;
+        display: block;
+        overflow: hidden;
+
+        width: 100%;
+        height: 100%;
+        }
+    .b-polygon-part_content:after {
+        content:"";
+
+        display: inline-block;
+
+        height: 100%;
+
+        vertical-align: middle;
+        }
+    .b-polygon-part_helper,
+    .b-polygon-part_content {
+        visibility: visible;
+        }
+    .b-polygon-part_content {
+        color: #777;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.4);
+
+        background: #EEE;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,0.1)), to(rgba(0,0,0,.4)));
+        background-image: -webkit-linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,.4));
+        background-image:    -moz-linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,.4));
+        background-image:      -o-linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,.4));
+        background-image:         linear-gradient(top,rgba(0,0,0,0.1),rgba(0,0,0,.4));
+        }
+        .b-polygon:hover .b-polygon-part_content {
+            color: #AAA;
+            text-shadow: 0 1px 0 rgba(0,0,0,0.4), 0 -1px 0 rgba(255,255,255,0.6);
+
+            background: #999;
+            background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(0,0,0,.4)), to(rgba(0,0,0,.1)));
+            background-image: -webkit-linear-gradient(top,rgba(0,0,0,.4),rgba(0,0,0,.1));
+            background-image:    -moz-linear-gradient(top,rgba(0,0,0,.4),rgba(0,0,0,.1));
+            background-image:      -o-linear-gradient(top,rgba(0,0,0,.4),rgba(0,0,0,.1));
+            background-image:         linear-gradient(top,rgba(0,0,0,.4),rgba(0,0,0,.1));
+            }
+
+.b-polygon_hexagon,
+.b-polygon_dodecagon {
+    -webkit-transform: rotate(120deg);
+       -moz-transform: rotate(120deg);
+         -o-transform: rotate(120deg);
+            transform: rotate(120deg);
+    }
+.b-polygon_hexagon>.b-polygon-part,
+.b-polygon_dodecagon>.b-polygon-part,
+.b-polygon_hexagon>.b-polygon-part>.b-polygon-part,
+.b-polygon_dodecagon>.b-polygon-part>.b-polygon-part {
+    -webkit-transform: rotate(-60deg);
+       -moz-transform: rotate(-60deg);
+         -o-transform: rotate(-60deg);
+            transform: rotate(-60deg);
+    }
+
+.b-polygon_octagon {
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    }
+.b-polygon_octagon2 {
+    -webkit-transform: rotate(66.6deg);
+       -moz-transform: rotate(66.6deg);
+         -o-transform: rotate(66.6deg);
+            transform: rotate(66.6deg);
+    }
+.b-polygon_octagon>.b-polygon-part {
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    }
+.b-polygon_octagon2>.b-polygon-part>.b-polygon-part {
+    -webkit-transform: rotate(-21.6deg);
+       -moz-transform: rotate(-21.6deg);
+         -o-transform: rotate(-21.6deg);
+            transform: rotate(-21.6deg);
+    }
+
+
+.hexagon-in2:hover {
+    background-image: url(http://placekitten.com/241/241);
+    }
+
+.b-polygon_square {
+    width: 100px;
+    height: 100px;
+    }
+.b-polygon_octagon {
+    width: 100px;
+    height: 100px;
+    }
+.b-polygon_octagon2 {
+    margin: 4px;
+    }
+    .b-polygon_octagon2 .b-polygon-part_content {
+        width: 108px;
+        height: 108px;
+        margin: -4px;
+        }
+.b-polygon_hexagon {
+    width: 200px;
+    height: 100px;
+    margin: 0 -42px;
+    }
+    .b-polygon_hexagon .b-polygon-part_content {
+        width: 116px;
+        height: 100px;
+        margin: 0 42px;
+        }
+.b-polygon_hexagon2 {
+    width: 100px;
+    height: 200px;
+    margin: -42px 0;
+    }
+    .b-polygon_hexagon2 .b-polygon-part_content {
+        width: 100px;
+        height: 116px;
+        margin: 42px 0;
+        }
+.b-polygon_dodecagon {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    }
+
+.b-polygons {
+    text-align: center;
+    padding-right: 27px;
+    }
+
+.b-megahexagon {
+    width: 406px;
+    margin: 0 auto 2em;
+    padding: 0 36px 50px 18px;
+    counter-reset:hexagon;
+    }
+    .b-megahexagon .b-polygon {
+        margin: 0 -54px -50px 26px;
+        }
+    .b-megahexagon .b-polygon-part_content:before {
+        content:counter(hexagon);
+        counter-increment:hexagon;
+
+        font-size: 3em;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 2px;
+        }
+    .b-megahexagon .b-polygon:nth-child(5n-1){
+        margin-left: -60px;
+        }
+    .b-megahexagon .b-polygon:nth-child(5n+1) {
+        margin-right: -100px;
+        }
+    .b-megahexagon .b-polygon:first-child,
+    .b-megahexagon .b-polygon:last-child {
+        margin-left: 112px;
+        margin-right: 112px;
+        }
