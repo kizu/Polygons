@@ -1,6 +1,6 @@
 # True CSS3-only convex polygons
 
-![Screenshot of a megahexagon, yay!][kizu.github.com/Polygons/Megahexagon.png]
+![Screenshot of a megahexagon, yay!](http://kizu.github.com/Polygons/Megahexagon.png)
 
 1. Use `overflow: hidden` on almost all blocks.
 2. Use `visibility: hidden` on all blocks except the last one.
