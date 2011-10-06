@@ -1,5 +1,36 @@
 /*_*/
 
+/* Styles for “Fork” link */
+.b-fork {
+	position: absolute;
+	top: 0;
+	left: 0;
+	}
+	.b-fork-link {
+		display: block;
+
+		padding: 10px 40px;
+		margin: 2em 0 0 -3em;
+	
+		font: bold 16px/1 Helvetica, Arial, sans-serif;
+		text-decoration: none;
+
+		color: #FFF;
+		background: #F40B00;
+	
+		-webkit-transform: rotate(-45deg);
+		   -moz-transform: rotate(-45deg);
+		     -o-transform: rotate(-45deg);
+		        transform: rotate(-45deg);
+		-webkit-transition: background .3s;
+		   -moz-transition: background .3s;
+		     -o-transition: background .3s;
+		        transition: background .3s;
+		}
+	A.b-fork-link:hover {
+		background: #0B00F4;
+		}
+
 h1 {
     text-align: center;
 	}
