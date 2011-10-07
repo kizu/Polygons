@@ -31,6 +31,10 @@
 		background: #0B00F4;
 		}
 
+BODY {
+	font-family: Helvetica, Arial, sans-serif;
+	}
+
 h1 {
     text-align: center;
 	}
